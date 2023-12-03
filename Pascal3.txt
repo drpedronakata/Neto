@@ -1,0 +1,42 @@
+ INIP ;          Iniciando o programa Example
+ LDCT 15 ;        Write(15)
+ STOR 16 ;        M16 d_t = 15
+ DUMP ;          L4
+ LDCT 6 ;        Write(6)
+ STOR 15 ;        M15 d_t2 = 6
+ DUMP ;          L7
+ LDCT 0 ;        Write(0)
+ STOR 19 ;        M19 a = 0
+ DUMP ;          L10
+L11: NOPE ;       Label_B do WHILE Lwhile
+ LDVL 19 ;        Write(a)
+ LDCT 1 ;        Write(1)
+ LEEQ ;          (a <= 1)
+ DUMP ;          L14
+ GOIF L15 ;
+ READ ;          Read(b)
+ STOR 18 ;        M18 b = READ
+ DUMP ;          L18
+ READ ;          Read(c)
+ STOR 17 ;        M17 c = READ
+ DUMP ;          L21
+ LDVL 17 ;        Write(c)
+ EQUA ;          (! = c)
+ DUMP ;          L24
+ GOIF L25 ;
+ LDVL 17 ;        Write(c)
+ ADD_ ;          (c + dt)
+ DUMP ;          L28
+ STOR 17 ;        M17 c = OPER
+ DUMP ;          L30
+L25: NOPE ;       Label do IF
+ LDVL 19 ;        Write(a)
+ LDCT 1 ;        Write(1)
+ ADD_ ;          (a + 1)
+ DUMP ;          L35
+ STOR 19 ;        M19 a = OPER
+ DUMP ;          L37
+ GOTO L11 ;
+L15: NOPE ;       Label do IF
+ LDVL 17 ;        Write(c)
+ SHOW ;          Show(c)
