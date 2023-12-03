@@ -40,3 +40,4 @@ L25: NOPE ;       Label do IF
 L15: NOPE ;       Label do IF
  LDVL 17 ;        Write(c)
  SHOW ;          Show(c)
+
