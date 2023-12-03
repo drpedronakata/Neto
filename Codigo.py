@@ -63,7 +63,7 @@ begin
   while a <= 1 do
   begin
     read(b, c);
-    if b != c then
+    if b <> c then
       c := c + dt;
     a := a + 1;
   end;
